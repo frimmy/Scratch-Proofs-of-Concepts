@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+}
+#site-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* Temp: simulates a tall page*/
+}
+#site-canvas {
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 5% 0;
+    /* Temp: just spacing*/
+    /* if user has 3d translates*/
+    -webkit-transform: translate3d(0);
+    -moz-transform: translate3d(0);
+    -ms-transform: translate3d(0);
+    -o-transform: translate3d(0);
+    transform: translate3d(0);
+}
+#site-menu {
+    width: 100%;
+    position: absolute;
+    bottom: -300px;
+    background: #400040;
+    padding: 15px;
+}
+#site-wrapper.show-nav #site-canvas {
+    -webkit-transform: translateY(-300px);
+    -moz-transform: translateY(-300px);
+    -ms-transform: translateY(-300px);
+    -o-transform: translateY(-300px);
+    transform: translateY(-300px);
+    -webkit-transform: translate3d(0, -300px, 0);
+    -moz-transform: translate3d(0, -300px, 0);
+    -ms-transform: translate3d(0, -300px, 0);
+    -o-transform: translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0);
+}
